@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <style>
 input[type=text], select {
     width: 100%;
@@ -219,7 +220,7 @@ div {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-
+<div ng-app="">
 <center>
 <form action="AddBankAction" method="post">
 <table align ="center" border="0" width="890">
@@ -229,7 +230,7 @@ div {
 
 <tr>
 <td align="left">Account Number:</td>
-<td ><input type="text" name="accountNumber"/></td>
+<td ><input type="text" ng-model="accountNumber"/></td>
 
 <td align="left">Bank Name:</td>
 <td ><input type="text" name="bname"/></td>
@@ -298,6 +299,9 @@ div {
 </form>
 </center>
 
+
+ <h1>Hello {{accountNumber}}</h1>
+ </div>
 <hr width="1000">
   <center>
        <font color="blue" size="2">All Right Reserved@Data Security Management System</font><br>
