@@ -18,6 +18,10 @@
   <servlet-name>AddBankAction</servlet-name>
   <url-pattern>/html/AddBankAction</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>AddBankAction</servlet-name>
+  <url-pattern>/AddBankAction</url-pattern>
+  </servlet-mapping>
   
 </web-app>
 
