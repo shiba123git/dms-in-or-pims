@@ -23,6 +23,11 @@ public class AddBankAction extends HttpServlet {
 	private static final long serialVersionUID = -7963335405101352968L;
 
 	@Override
+	public void init() {
+
+	}
+
+	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		@SuppressWarnings("rawtypes")
 		BankAccountService service = new BankAccountServiceImpl();
@@ -42,6 +47,11 @@ public class AddBankAction extends HttpServlet {
 		if (service.createBankAccount(bad)) {
 			response.sendRedirect("/success.jsp");
 		}
+
+	}
+
+	@Override
+	public void destroy() {
 
 	}
 
