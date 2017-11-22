@@ -43,6 +43,6 @@
     
   </dependencies>
   <build>
-    <finalName>Data Security Management System</finalName>
+    <finalName>DSMS</finalName>
   </build>
 </project>
