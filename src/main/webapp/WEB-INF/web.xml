@@ -16,7 +16,7 @@
   </servlet>
   <servlet-mapping>
   <servlet-name>AddBankAction</servlet-name>
-  <url-pattern>/AddBankAction</url-pattern>
+  <url-pattern>/html/AddBankAction</url-pattern>
   </servlet-mapping>
   
 </web-app>
