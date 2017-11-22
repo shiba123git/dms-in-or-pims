@@ -43,11 +43,11 @@ input[type=button] {
     cursor: pointer;
 }
 
-div {
+/* div {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-}
+} */
 
 .header
 {
@@ -230,62 +230,62 @@ div {
 
 <tr>
 <td align="left">Account Number:</td>
-<td ><input type="text" ng-model="accountNumber"/></td>
+<td ><input type="text" ng-model="accountNumber"/>{{accountNumber}}</td>
 
 <td align="left">Bank Name:</td>
-<td ><input type="text" name="bname"/></td>
+<td ><input type="text" ng-model="bankName"/>{{bankName}}</td>
 </tr>
 
 <tr>
 <td align="left">User Name:</td>
-<td ><input type="text" name="userName"/></td>
+<td ><input type="text" ng-model="userName"/>{{userName}}</td>
 
 <td align="left">Password:</td>
-<td ><input type="text" name="password"/></td>
+<td ><input type="text" ng-model="password"/>{{password}}</td>
 </tr>
 
 <tr>
 <td align="left">Transaction Password:</td>
-<td ><input type="text" name="transactionPassword"/></td>
+<td ><input type="text" ng-model="transactionPassword"/>{{transactionPassword}}</td>
 
 <td align="left">URL:</td>
-<td ><input type="text" name="url"/></td>
+<td ><input type="text" ng-model="url"/>{{url}}</td>
 </tr>
 
 <tr>
 <td align="left">Registered Mobile Number:</td>
-<td ><input type="text" name="mobile"/></td>
+<td ><input type="text" ng-model="mobile"/>{{mobile}}</td>
 
 <td align="left">Registered Email:</td>
-<td ><input type="text" name="email"/></td>
+<td ><input type="text" ng-model="email"/>{{email}}</td>
 </tr>
 
 
 <tr>
 <td align="left">is OnLine:</td>
-<td ><select name="isOnline">
+<td ><select ng-model="isOnline">
 <option value="-">---Select---</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
-</select>
+</select>{{isOnline}}
 </td>
 
 <td align="left">is PPF Enable:</td>
-<td ><select name="isppf">
+<td ><select ng-model="isppf">
 <option value="-">---Select---</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
 </select>
-</td>
+</td>{{isppf}}
 </tr>
 
 
 <tr>
 <td align="left">IFSC Code:</td>
-<td ><input type="text" name="ifsccode"/></td>
+<td ><input type="text" ng-model="ifsccode"/>{{ifsccode}}</td>
 
 <td align="left">Account Holder Name</td>
-<td ><input type="text" name="name"/></td>
+<td ><input type="text" ng-model="name"/>{{name}}</td>
 </tr>
 
 <tr>
@@ -300,7 +300,7 @@ div {
 </center>
 
 
- <h1>Hello {{accountNumber}}</h1>
+ <h1>Hello </h1>
  </div>
 <hr width="1000">
   <center>
