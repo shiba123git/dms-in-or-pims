@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.1.6:1521:orcl</property>
+		<property name="hibernate.connection.username">system</property>
+		<property name="hibernate.connection.password">telefonica</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="format_sql">true</property>
+		<property name="hibernate.generate_statistics">true</property>
+		<property name="use_sql_comments">true</property>
+		<property name="hibernate.jdbc.batch_size">30</property>
+		 <!-- 
+		<property name="hibernate.cache.use_secound_level_cache">true</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property> 
+		<property name="net.sf.ehcache.configurationResourceName">/ehcache.xml</property> 
+			
+	   <mapping class="com.pims.shiba.java.bank.DebitCardDetails" />
+		<mapping class="com.pims.shiba.java.ppf.PPFAccountInformation" />
+		<mapping class="com.pims.shiba.java.ppf.PPFTransactionDetails" />
+		<mapping class="com.src.main.java.pojo.DebitCardDetails" />
+			-->
+
+        <mapping class="com.thread.java.DocumentDetails"/>
+        <mapping class="com.thread.java.BankAccountDetails"/>
+        <mapping class="com.thread.java.DebitCardDetails"/>
+        <mapping class="com.thread.java.CreditCardDetails"/>
+		<!--<mapping class="com.src.main.java.pojo.LoginPOJO"/>
+		<mapping class="com.src.main.java.pojo.BankAccountDetails" />
+		<mapping class="com.src.main.java.pojo.LifeInsurancePolicy" />
+		<mapping class="com.src.main.java.ppf.details.PPFAcountDetails" />
+		<mapping class="com.src.main.java.ppf.details.PPFTransactionDetails" />
+		<mapping class="com.src.main.java.pojo.UANDetails"/>
+		<mapping class="com.src.main.java.pojo.CompanyDetails"/>
+		<mapping class="com.src.main.java.pojo.MyPersonalDetails"/>
+		<mapping class="com.src.main.java.contact.ContactDetails"/>
+		<mapping class="com.src.main.java.document.DocumentDBMappingDetails"/>
+		<mapping class="com.src.main.java.LoanDetails.PersonalLoanDetails"/>
+		<mapping class="com.src.main.java.hibernateFilter.Employee"/>
+		<mapping class="com.dms.web.bankdetails.CreateBank"/>
+		<mapping class="com.dms.web.bankdetails.PhotoDetails"/>
+		<mapping class="com.dms.web.bankdetails.MusicDetails"/>-->
+		
+	</session-factory>
+</hibernate-configuration>

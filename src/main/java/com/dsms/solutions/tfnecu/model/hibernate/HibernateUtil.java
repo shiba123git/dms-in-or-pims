@@ -23,7 +23,7 @@ public final class HibernateUtil {
 		if (annotationSessionfactory == null) {
 			System.out.println("*********Session Factory is null creating new Object ********");
 			AnnotationConfiguration acf = new AnnotationConfiguration();
-			annotationSessionfactory = acf.configure("hibernate.cfg.xml").buildSessionFactory();
+			annotationSessionfactory = acf.configure("/hibernate.cfg.xml").buildSessionFactory();
 			System.out.println("*********New Object Return ********");
 			return annotationSessionfactory;
 
