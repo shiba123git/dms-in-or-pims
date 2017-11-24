@@ -5,6 +5,7 @@ package com.dsms.solutions.tfnecu.web.webservices.soap;
 
 import java.math.BigInteger;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -31,12 +32,32 @@ public class BankDetailsWSSoapController implements BankDetailsWSSoapControllerI
 		}
 		@SuppressWarnings("rawtypes")
 		BankAccountService bankAccountService = new BankAccountServiceImpl();
+		BankAccountDetails bad = new BankAccountDetails();
+		bad.setAccountNumber(new BigInteger("11196203437"));
+		bad.setAdharCard("836010197307");
+		bad.setBankName("SBI");
+		bad.setOnline(true);
+		bad.setStatus("Active");
+		bad.setPanNo("BNZPM3658M");
+		bad.setRegisteredEmail("spm09.mishra@gmail.com");
+		bad.setRegisteredMobileNumber(new BigInteger("7204118564"));
+		bad.setUserId("shibaprasad143");
+		bad.setPassword("shibaprasad123@");
+		bad.setTransactionPassword("prasad143@");
+		bad.setIfsccode("SBIN0002071");
+
 		try {
-			@SuppressWarnings("unused")
-			List<BankAccountDetails> bankList = bankAccountService
-					.getBankbyAccountNumber(new BigInteger(bankAccountRequest.getAccountNumber()));
+			List<BankAccountDetails> bankList = new CopyOnWriteArrayList<BankAccountDetails>();
+			bankList.add(bad);
+			bankAccountResponse.setBankAccountDetails(bankList);
+			bankAccountResponse.setResponseMessage(WEBSERVICESTATUS.SUCCESS.toString());
+			bankAccountResponse.setStatusCode(WEB_SERVICE_STATUS_CODE.SUC000.toString());
+			// bankList = bankAccountService.getBankbyAccountNumber(new
+			// BigInteger(bankAccountRequest.getAccountNumber()));
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+
 		}
 		return bankAccountResponse;
 	}
