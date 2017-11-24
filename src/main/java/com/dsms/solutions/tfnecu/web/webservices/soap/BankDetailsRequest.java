@@ -27,4 +27,8 @@ public class BankDetailsRequest implements Serializable {
 		return serialVersionUID;
 	}
 
+	public BankDetailsRequest() {
+		super();
+	}
+
 }

@@ -59,4 +59,8 @@ public class BankDetailsResponse implements Serializable {
 		this.responseMessage = responseMessage;
 	}
 
+	public BankDetailsResponse() {
+		super();
+	}
+
 }
