@@ -28,10 +28,10 @@
 		<mapping class="com.src.main.java.pojo.DebitCardDetails" />
 			-->
 
-        <mapping class="com.thread.java.DocumentDetails"/>
-        <mapping class="com.thread.java.BankAccountDetails"/>
-        <mapping class="com.thread.java.DebitCardDetails"/>
-        <mapping class="com.thread.java.CreditCardDetails"/>
+        
+        <mapping class="com.dsms.solutions.tfnecu.common.BankAccountDetails"/>
+        <mapping class="com.dsms.solutions.tfnecu.common.DebitCardDetails"/>
+        <mapping class="com.dsms.solutions.tfnecu.common.CreditCardDetails"/>
 		<!--<mapping class="com.src.main.java.pojo.LoginPOJO"/>
 		<mapping class="com.src.main.java.pojo.BankAccountDetails" />
 		<mapping class="com.src.main.java.pojo.LifeInsurancePolicy" />
