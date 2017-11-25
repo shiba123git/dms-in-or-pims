@@ -19,6 +19,8 @@ import com.dsms.solutions.tfnecu.impl.bank.BankAccountServiceImpl;
 @WebService(name = "BankDetailsWebService", endpointInterface = "com.dsms.solutions.tfnecu.web.webservices.soap.BankDetailsWSSoapControllerInterface", portName = "BankDetailsWebServicePort", serviceName = "BankDetailsWebService", targetNamespace = "com.dsms.solutions.tfnecu.web.webservices.soap", wsdlLocation = "")
 public class BankDetailsWSSoapController implements BankDetailsWSSoapControllerInterface {
 
+	public static final String EMPTY_ACCOUNT_NUMBER = "Account Number";
+
 	@WebMethod(action = "getBankAccountDetails", exclude = false)
 	@SuppressWarnings("unchecked")
 	@WebResult(header = false, name = "getBankAccountDetails", targetNamespace = "com.dsms.solutions.tfnecu.web.webservices.soap.BankDetailsResponse")
@@ -28,7 +30,8 @@ public class BankDetailsWSSoapController implements BankDetailsWSSoapControllerI
 		if (null == bankAccountRequest.getAccountNumber()) {
 			bankAccountResponse.setStatus(WEBSERVICESTATUS.FAILURE.toString());
 			bankAccountResponse.setStatusCode(WEB_SERVICE_STATUS_CODE.SUC001.toString());
-			bankAccountResponse.setResponseMessage(WEB_SERVICE_CONSTANT_MESSAGE.EMPTY_INPUT.EMPTY_ACCOUNT_NUMBER);
+			bankAccountResponse.setResponseMessage(
+					String.format(WEB_SERVICE_CONSTANT_MESSAGE.EMPTY_INPUT.FORMAT_MESSAGE, EMPTY_ACCOUNT_NUMBER));
 		}
 		@SuppressWarnings("rawtypes")
 		BankAccountService bankAccountService = new BankAccountServiceImpl();
