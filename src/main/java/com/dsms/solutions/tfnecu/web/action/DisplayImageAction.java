@@ -32,11 +32,11 @@ public class DisplayImageAction {
 	@RequestMapping(method = RequestMethod.POST)
 	public String getSearchedImage(HttpServletRequest request, HttpServletResponse response) {
 		String searchCondition = request.getParameter("searchCondition");
-		LOGGER.debug("inside getSearchedImage method");
-		LOGGER.debug("searchCondition is {}", searchCondition);
+		List<MyImageDetails> imageList = null;
 		if (null != searchCondition) {
-			List<MyImageDetails> imageList = (List<MyImageDetails>) imageService.fetchImage(searchCondition);
+			imageList = (List<MyImageDetails>) imageService.fetchImage(searchCondition);
 		}
+		System.out.println("Image List is :::" + imageList);
 		return null;
 
 	}
