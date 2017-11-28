@@ -1,0 +1,5 @@
+<xwss:SecurityConfiguration 
+       xmlns:xwss="http://java.sun.com/xml/ns/xwss/config"
+       dumpMessages="true">
+       <xwss:UsernameToken digestPassword="fasle"/>
+</xwss:SecurityConfiguration>

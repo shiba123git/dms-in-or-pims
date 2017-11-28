@@ -24,5 +24,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/SHIVA/jar/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Babu/Desktop/xws-security-3.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

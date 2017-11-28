@@ -10,6 +10,10 @@
   <welcome-file-list>
   <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
   <servlet>
   <servlet-name>AddBankAction</servlet-name>
   <servlet-class>com.dsms.solutions.tfnecu.web.action.AddBankAction</servlet-class>
@@ -22,6 +26,16 @@
   <servlet-name>AddBankAction</servlet-name>
   <url-pattern>/AddBankAction</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>dispatcher</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>dispatcher</servlet-name>
+  <url-pattern>*.spring</url-pattern>
+  </servlet-mapping>  
   
 </web-app>
 
