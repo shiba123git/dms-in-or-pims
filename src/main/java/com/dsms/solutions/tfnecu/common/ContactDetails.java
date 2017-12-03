@@ -9,11 +9,8 @@ package com.dsms.solutions.tfnecu.common;
  */
 public class ContactDetails {
 
-	/**
-	 * 
-	 */
-	public ContactDetails() {
-		// TODO Auto-generated constructor stub
-	}
-
+	private int contactObjectId;
+	private String fName;
+	private String mname;
+	private String lname;
 }
