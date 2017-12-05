@@ -33,6 +33,15 @@
         <mapping class="com.dsms.solutions.tfnecu.common.DebitCardDetails"/>
         <mapping class="com.dsms.solutions.tfnecu.common.CreditCardDetails"/>
         <mapping class="com.dsms.solutions.tfnecu.common.MyImageDetails"/>
+        
+        
+        <mapping class="com.dsms.solutions.tfnecu.common.ContactDetails"/>
+        <mapping class="com.dsms.solutions.tfnecu.common.ContactLocationDetails"/>
+        <mapping class="com.dsms.solutions.tfnecu.common.ContactAccessibility"/>
+        
+        <mapping class="com.dsms.solutions.tfnecu.common.UniversalAccountNumber"/>
+        <mapping class="com.dsms.solutions.tfnecu.common.ProvidentFundAccountDetails"/>
+        
 		<!--<mapping class="com.src.main.java.pojo.LoginPOJO"/>
 		<mapping class="com.src.main.java.pojo.BankAccountDetails" />
 		<mapping class="com.src.main.java.pojo.LifeInsurancePolicy" />
