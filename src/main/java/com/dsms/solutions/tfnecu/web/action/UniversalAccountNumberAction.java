@@ -1,7 +1,6 @@
 package com.dsms.solutions.tfnecu.web.action;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.dsms.solutions.tfnecu.common.UniversalAccountNumber;
 import com.dsms.solutions.tfnecu.impl.UniversalAccountServiceImpl;
 import com.dsms.solutions.tfnecu.service.UniversalAccountService;
 
@@ -27,9 +25,10 @@ public class UniversalAccountNumberAction {
 	@RequestMapping(method = RequestMethod.POST)
 	public String getUANDetails(HttpServletRequest request, HttpServletResponse response) {
 		String uanNumber = request.getParameter("uanNumber");
-		System.out.println("User Name is :::" + uanNumber);
-		List<UniversalAccountNumber> uanDetails = (List<UniversalAccountNumber>) uanService.getUanDetails(uanNumber);
-		if (!uanDetails.isEmpty()) {
+		System.out.println("uanNumber is :::" + uanNumber);
+		// List<UniversalAccountNumber> uanDetails =
+		// (List<UniversalAccountNumber>) uanService.getUanDetails(uanNumber);
+		if (uanNumber != null) {
 			try {
 				response.sendRedirect("/displayUanDetails.jsp?requestedSessionId=" + ""
 						+ request.getRequestedSessionId() + "&pageEncoding=" + PAGE_ENCODING);
