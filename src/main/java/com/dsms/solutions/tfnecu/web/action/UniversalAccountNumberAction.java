@@ -30,8 +30,8 @@ public class UniversalAccountNumberAction {
 		// (List<UniversalAccountNumber>) uanService.getUanDetails(uanNumber);
 		if (uanNumber != null) {
 			try {
-				response.sendRedirect("/displayUanDetails.jsp?requestedSessionId=" + ""
-						+ request.getRequestedSessionId() + "&pageEncoding=" + PAGE_ENCODING);
+				response.sendRedirect("displayUanDetails.jsp?requestedSessionId=" + "" + request.getRequestedSessionId()
+						+ "&pageEncoding=" + PAGE_ENCODING);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
