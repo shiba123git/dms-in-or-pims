@@ -11,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.dsms.solutions.tfnecu.base64.encode.decode.DSMSBase64Encryption;
 import com.dsms.solutions.tfnecu.impl.UniversalAccountServiceImpl;
 import com.dsms.solutions.tfnecu.service.UniversalAccountService;
 
@@ -27,13 +26,13 @@ public class UniversalAccountNumberAction {
 	public String getUANDetails(HttpServletRequest request, HttpServletResponse response) {
 		String uanNumber = request.getParameter("uanNumber");
 		System.out.println("uanNumber is :::" + uanNumber);
-		String uanEncodedValue = DSMSBase64Encryption.encryptData(uanNumber);
+		// String uanEncodedValue = DSMSBase64Encryption.encryptData(uanNumber);
 		// List<UniversalAccountNumber> uanDetails =
 		// (List<UniversalAccountNumber>) uanService.getUanDetails(uanNumber);
 		if (uanNumber != null) {
 			try {
 				response.sendRedirect("displayUanDetails.jsp?requestedSessionId=" + "" + request.getRequestedSessionId()
-						+ "&pageEncoding=" + PAGE_ENCODING + "&UniversalAccountNumber=" + uanEncodedValue);
+						+ "&pageEncoding=" + PAGE_ENCODING + "&UniversalAccountNumber=" + uanNumber);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
