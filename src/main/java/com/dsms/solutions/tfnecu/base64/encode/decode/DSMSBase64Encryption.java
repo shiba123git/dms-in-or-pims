@@ -10,6 +10,7 @@ import com.sun.xml.wss.impl.misc.Base64;
  * @author Babu
  *
  */
+@SuppressWarnings("restriction")
 public class DSMSBase64Encryption {
 
 	public static String encryptData(String paramValue) {
