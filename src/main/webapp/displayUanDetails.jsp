@@ -8,5 +8,10 @@
 </head>
 <body>
              Display uan details
+             
+             <% 
+                 String uanDecodedValue=request.getParameter("UniversalAccountNumber");
+                 out.println("Universal Account Number::"+uanDecodedValue);
+             %>
 </body>
 </html>
